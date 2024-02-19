@@ -104,8 +104,8 @@ function navigateTo(page) {
             <div class="team-members">
                 <!-- Example of a team member card -->
                 <div class="team-member">
-                    <img src="/QR Generator/image/team1.png" alt="Team Member Name">
-                    <img src="/QR Generator/image/team.png" alt="Team Member Name">
+                    <img src="assets/img/team1.png" alt="Team Member Name">
+                    <img src="assets/img/team.png" alt="Team Member Name">
                     <h3>Team Teraita</h3>
                     <p><strong>We are the Teraitians....!</strong></p>
                 </div>

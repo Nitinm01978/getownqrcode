@@ -28,7 +28,7 @@ header {
 }
 
 .home{
-    background-image: url('/QR Generator/image/qr1.png');
+    background-image: url('assets/img/qr1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
