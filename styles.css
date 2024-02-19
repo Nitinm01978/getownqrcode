@@ -1,0 +1,474 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color:#dfdfdf;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: rgb(94, 201, 228);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home{
+    background-image: url('/QR Generator/image/qr1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    z-index: -1;
+}
+/* Navigation */
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li:hover{
+    color: #000;
+    font-size:  large;
+    
+}
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: calc(100vh - 140px); /* Adjust based on your header/footer height */
+    padding: 20px;
+}
+
+h1 {
+    margin: 0.67em 0;
+}
+
+p {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(94, 201, 228);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    p {
+        padding: 0 20px;
+    }
+}
+
+
+/* MyQRCode Page  */
+#qrcode-page {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#websiteUrl {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+#qrcode {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+/* Responsive Design for MyQRCode Page */
+@media screen and (max-width: 768px) {
+    #websiteUrl, .generate-btn {
+        width: 90%;
+    }
+}
+
+/* contactForm */
+ #contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form h2 {
+    margin-bottom: 20px;
+    color: #005A9C;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Makes sure padding doesn't affect the overall width */
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #005A9C;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: #004080;
+}
+
+/* Responsive Design */
+ @media screen and (max-width: 768px) {
+    #contact-form {
+        width: 90%;
+        padding: 10px;
+    }
+}  
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5a615b;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #81d830;
+}
+
+/* logincss */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.login-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* makes sure padding doesn't affect the overall width */
+}
+
+button#loginButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button#loginButton:hover {
+    background-color: #004494;
+}
+
+.login-container p {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.login-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+
+/* signup css */
+.signup-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.signup-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button#signupButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button#signupButton:hover {
+    background-color: #218838;
+}
+
+.signup-container p {
+    margin-top: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.signup-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
+}
+
+/* about css */
+/* General styling for the about sections */
+.about-section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #666;
+}
+
+/* Styling for the team members section */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Adjust as needed */
+    gap: 20px; /* Spacing between team member cards */
+}
+
+.team-member {
+    width: calc(33.333% - 20px); /* Adjust width as needed, accounting for gap */
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.team-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Creates a circular image */
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    margin: 0;
+    color: #333;
+}
+
+.team-member p {
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-member {
+        width: calc(50% - 20px); /* Increase width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        width: 100%; /* Full width on very small screens */
+    }
+}
+
+
+/* my qrcode css */
+.code {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.code h1 {
+    margin-bottom: 20px;
+}
+
+#websiteUrl {
+    padding: 10px;
+    margin-right: 10px;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1aa13b;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    /* width: 60%; */
+    
+}
+
+button:hover {
+    background-color: #5cb910;
+}
+
+#qrcode {
+    margin-top: 50px;
+}
+
+/* home page css */
+.welcome-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+.welcome-section h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.inline-logo {
+    vertical-align: middle; 
+    height: 100px; 
+    margin-right: 10px; 
+}
+
+
+
