@@ -56,15 +56,81 @@ function navigateTo(page) {
                 <button onclick="generateQRCode()">Generate QR Code</button>
                 
                  <div id="qrcode"></div>
+
+                 <button id="downloadQR" class ="qr1">Download QR Code</button>
             </div>
             
             `;
-            function resetQRCode() {
-                // Clear the QR code div
-                document.getElementById('qrcode').innerHTML = '';
-                // Optionally reset the website URL input field
-                document.getElementById('websiteUrl').value = '';
-            }
+            // document.getElementById('downloadQR').addEventListener('click', function() {
+            //     const qrcodeCanvas = document.querySelector('#qrcode canvas');
+            //     const websiteUrl = document.getElementById('websiteUrl').value; 
+                
+            //     if (qrcodeCanvas && websiteUrl) {
+                  
+            //       const newCanvas = document.createElement('canvas');
+            //       newCanvas.width = qrcodeCanvas.width;
+            //       newCanvas.height = qrcodeCanvas.height;
+            //       const context = newCanvas.getContext('2d');
+            //       context.fillStyle = '#ffffff'; 
+            //       context.fillRect(0, 0, newCanvas.width, newCanvas.height);
+            //       context.drawImage(qrcodeCanvas, 0, 0);
+              
+                  
+            //       const sanitizedUrl = websiteUrl.replace(/[^a-z0-9]/gi, '_').toLowerCase(); 
+            //       const filename = sanitizedUrl + '.png'; 
+              
+                  
+           
+              
+            document.getElementById('downloadQR').addEventListener('click', function() {
+                const qrcodeCanvas = document.querySelector('#qrcode canvas');
+                const websiteUrl = document.getElementById('websiteUrl').value; // Get the entered URL
+              
+                if (qrcodeCanvas && websiteUrl) {
+                  // Create a new canvas to include the URL text and the QR code on a white background
+                  const newCanvas = document.createElement('canvas');
+                  const ctx = newCanvas.getContext('2d');
+                  const margin = 20; // Margin around the QR code and text
+                  const textHeight = 20; // Height of the text
+                  // Adjust the new canvas size to include the QR code, text, and margins
+                  newCanvas.width = qrcodeCanvas.width + margin * 2;
+                  newCanvas.height = qrcodeCanvas.height + textHeight + margin * 3;
+              
+                  // Set background to white
+                  ctx.fillStyle = '#FFFFFF';
+                  ctx.fillRect(0, 0, newCanvas.width, newCanvas.height);
+              
+                  // Set text properties and draw the URL name
+                  ctx.fillStyle = '#000000'; // Text color
+                  ctx.font = '16px Arial';
+                  ctx.textAlign = 'center';
+                  ctx.fillText(websiteUrl, newCanvas.width / 2, margin + textHeight);
+              
+                  // Draw the QR code below the text
+                  ctx.drawImage(qrcodeCanvas, margin, textHeight + margin * 2);
+              
+                  // Convert canvas to image
+                  const imageUrl = newCanvas.toDataURL('image/png');
+              
+                  // Create a sanitized filename from the URL
+                  let filename = 'QR_' + websiteUrl.replace(/[^a-zA-Z0-9]/g, '_') + '.png';
+              
+                  // Create a link and trigger download
+                  const link = document.createElement('a');
+                  link.href = imageUrl;
+                  link.download = filename;
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+              
+                  // Alert the user that download has started
+                  alert('Your QR code is downloading!');
+                } else {
+                  alert('Please generate a QR code first.');
+                }
+              });
+              
+              
             
             break;
         case 'contact':
